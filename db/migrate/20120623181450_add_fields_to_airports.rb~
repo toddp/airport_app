@@ -1,0 +1,4 @@
+class AddFieldsToAirports < ActiveRecord::Migration
+  def change
+  end
+end
