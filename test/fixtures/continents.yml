@@ -1,0 +1,12 @@
+EU:
+  name: Europe
+NA:
+  name: North America
+SA:
+  name: South America
+AS:
+  name: Asia
+OC:
+  name: Oceania
+AF:
+  name: Africa

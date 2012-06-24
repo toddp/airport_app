@@ -3,7 +3,7 @@
 </div>
 <div data-role="content">
   <% @airports.each do |a| %>
-    <%= link_to a.code , airport_path(a), "data-role"=>"button"%>
+    <%= link_to a.iata_code , airport_path(a), "data-role"=>"button"%>
   <% end %>
   
 </div>

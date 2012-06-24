@@ -4,7 +4,7 @@ AirportApp::Application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
 
-  resources :airports, :terminals, :vendors
+  resources :airports, :terminals, :vendors, :continents, :countries
 
 
   # The priority is based upon order of creation:

@@ -3,5 +3,6 @@ class Airport < ActiveRecord::Base
 
 
   has_many :terminals
-
+  belongs_to :country
+  belongs_to :continent
 end

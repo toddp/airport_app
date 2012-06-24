@@ -5,7 +5,8 @@ class AirportsController < ApplicationController
   end
 
   def index
-    @airports = Airport.find(:all)
+    #limit to only us airports for now
+    @airports = Airport.find(:all, :limit => 10)
   end
 
 end

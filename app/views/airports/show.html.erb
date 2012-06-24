@@ -1,10 +1,16 @@
 <div data-role="header" data-theme="b">
-    <h1><%= @airport.code %></h1>
+  <p><%= link_to @airport.country.continent.name, continent_path(@airport.continent) %> > 
+    <%= link_to @airport.country.name, country_path(@airport.country) %> > 
+    <%= link_to @airport.name, airport_path(@airport) %>  
+</p>
+    <h1><%= @airport.iata_code %></h1>
     <h2><%= @airport.name %></h2>
 </div>
 <div data-role="content">
 
-<%= @airport.description %>  
+<%= link_to "#{@airport.iata_code} on Wikipedia",  @airport.wikipedia_link %>  
+<div>coordinates: (<%= "#{@airport.lat} , #{@airport.long}" %>)</div>
+<div>elevation: <%= @airport.elevation_ft %>'</div>
 </div>
 <div data-role="footer" data-theme="b">
     <h4>Copyright 2011</h4>

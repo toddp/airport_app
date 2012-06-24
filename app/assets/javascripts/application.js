@@ -13,3 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require airports
+//= require continents
+//= require countries

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120623183134) do
+ActiveRecord::Schema.define(:version => 20120624001725) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -47,20 +47,42 @@ ActiveRecord::Schema.define(:version => 20120623183134) do
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
   create_table "airports", :force => true do |t|
-    t.string   "code"
+    t.string   "ident"
+    t.integer  "openflight_id"
     t.string   "name"
-    t.text     "description"
+    t.string   "airport_type"
     t.float    "lat"
     t.float    "long"
-    t.string   "city"
-    t.string   "state"
-    t.string   "country"
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
-    t.string   "country_code"
-    t.integer  "world_area_code"
-    t.integer  "city_name_geo_name_id"
-    t.integer  "country_name_geo_name_id"
+    t.integer  "elevation_ft"
+    t.integer  "continent_id"
+    t.integer  "country_id"
+    t.string   "iso_region"
+    t.string   "municipality"
+    t.string   "scheduled_service"
+    t.string   "gps_code"
+    t.string   "iata_code"
+    t.string   "local_code"
+    t.string   "home_link"
+    t.string   "wikipedia_link"
+    t.string   "keywords"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  create_table "continents", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "countries", :force => true do |t|
+    t.string   "code"
+    t.string   "name"
+    t.string   "wikipedia_link"
+    t.string   "keywords"
+    t.integer  "continent_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "terminals", :force => true do |t|
