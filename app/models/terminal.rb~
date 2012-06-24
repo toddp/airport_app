@@ -1,3 +1,0 @@
-class Terminal < ActiveRecord::Base
-  attr_accessible :description, :name, :reference
-end

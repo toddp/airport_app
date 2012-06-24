@@ -1,2 +1,0 @@
-class ContinentsController < ApplicationController
-end
