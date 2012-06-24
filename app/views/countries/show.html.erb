@@ -1,0 +1,17 @@
+<div data-role="header" data-theme="b">
+  <p><%= link_to @country.continent.name, continent_path(@country.continent) %> > 
+    <%= link_to @country.name, country_path(@country) %> 
+</p>
+
+    <h2><%= @country.name %></h2>
+</div>
+<div data-role="content">
+
+  <%  @country.airports.each do |a| %>
+    <%= link_to a.iata_code , airport_path(a), "data-role"=>"button" %>
+  <% end %>
+</div>
+<div data-role="footer" data-theme="b">
+    <h4>Copyright 2011</h4>
+</div>
+

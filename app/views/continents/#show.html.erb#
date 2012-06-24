@@ -1,0 +1,14 @@
+<div data-role="header" data-theme="b">
+    <h2><%= @continent.name %></h2>
+</div>
+<div data-role="content">
+
+  <%  @continent.countries.each do |c| %>
+    <%= link_to c.name , country_path(c), "data-role"=>"button" %>
+  <% end %>
+</div>
+<div data-role="footer" data-theme="b">
+    <h4>Copyright 2011</h4>
+</div>
+
+
